@@ -38,7 +38,7 @@ If **Souvik** can learn it this way, you can too.
 | # | Topic | What’s inside |
 |---|--------|----------------|
 | 0 | [`0_WHAT_IS_AI`](0_WHAT_IS_AI/) | Basics — what AI / ML / DL / generative AI mean |
-| 1 | [`1_PRACTICE_ON_OLLAMA_and_OPENAI`](1_PRACTICE_ON_OLLAMA_and_OPENAI/) | First API calls — OpenAI cloud + local Ollama |
+| 1 | [`1_PRACTICE_ON_OLLAMA_and_OPENAI`](1_PRACTICE_ON_OLLAMA_and_OPENAI/) | First API calls — OpenAI cloud + local Ollama; chat `role`s + memory |
 | 2 | [`2_USER_PROMPT_SYSTEM_PROMPT`](2_USER_PROMPT_SYSTEM_PROMPT/) | System prompt vs user prompt |
 | 3 | [`3_LLMs_and_TOKENS`](3_LLMs_and_TOKENS/) | What an LLM is, features, tokens, stateless calls |
 | 4 | [`4_GRADIO`](4_GRADIO/) | Gradio UIs + chatbot with chat history |
@@ -56,11 +56,17 @@ If **Souvik** can learn it this way, you can too.
 | 16 | [`16_LORA`](16_LORA/) | LoRA / QLoRA — read `1_` … `3_` in [`16_LORA/`](16_LORA/) |
 | 17 | [`17_MODAL`](17_MODAL/) | Modal — start [`1_what_is_modal.md`](17_MODAL/1_what_is_modal.md) |
 
+### Topic 1 highlight
+
+- Notes: [`chat_message_roles.md`](1_PRACTICE_ON_OLLAMA_and_OPENAI/chat_message_roles.md) — `system` / `user` / `assistant` in the Chat API  
+- Scripts: [`Test_OPENAI_LLM_with_openAI.py`](1_PRACTICE_ON_OLLAMA_and_OPENAI/Test_OPENAI_LLM_with_openAI.py) · [`Test_ollama_with_OPENAI.py`](1_PRACTICE_ON_OLLAMA_and_OPENAI/Test_ollama_with_OPENAI.py) · [`chat_conversation_memory_LLM.py`](1_PRACTICE_ON_OLLAMA_and_OPENAI/chat_conversation_memory_LLM.py)  
+
 ### Topic 5 highlight
 
 - Chapter intro: [`5_TOOLS_FUNCTIONS/README.md`](5_TOOLS_FUNCTIONS/README.md) — what tools mean in AI  
-- Script: [`tool_functions_1.py`](5_TOOLS_FUNCTIONS/tool_functions_1.py)  
-- Notes: [`tool_functions_1.md`](5_TOOLS_FUNCTIONS/tool_functions_1.md) — tool schema, `handle_tool_call`, why 2 LLM calls, real Paris price print trace  
+- Step 1: [`helper_functions_and_demo.md`](5_TOOLS_FUNCTIONS/helper_functions_and_demo.md) — plain Python helpers + `demo_helper_functions.py`  
+- Step 2: [`tool_functions_2_and_tools_2.md`](5_TOOLS_FUNCTIONS/tool_functions_2_and_tools_2.md) — personas, chat memory, keyword → `tools_2.py`  
+- Step 3: [`tool_functions_1.py`](5_TOOLS_FUNCTIONS/tool_functions_1.py) · [`tool_functions_1.md`](5_TOOLS_FUNCTIONS/tool_functions_1.md) — OpenAI `tools=`, Gradio FlightAI  
 
 ### Topic 6 highlight
 
@@ -99,6 +105,8 @@ If **Souvik** can learn it this way, you can too.
 - Script: [`keyword_rag_gradio_chat.py`](12_RAG_Retrieval_Augmented_Generation/keyword_rag_gradio_chat.py) · Notes: [`keyword_rag_gradio_chat.md`](12_RAG_Retrieval_Augmented_Generation/keyword_rag_gradio_chat.md) — dictionary keyword RAG + Gradio chat  
 - [`2_rag_architecture_and_workflow.md`](12_RAG_Retrieval_Augmented_Generation/2_rag_architecture_and_workflow.md) — ingest, retrieve, augment, generate; 6-step query flow  
 - [`3_lm_types_and_embeddings.md`](12_RAG_Retrieval_Augmented_Generation/3_lm_types_and_embeddings.md) — autoregressive vs autoencoding; BERT / OpenAI embeddings  
+- Hands-on: [`text_embedding_3_small.md`](12_RAG_Retrieval_Augmented_Generation/text_embedding_3_small.md) · [`embedding_demo.py`](12_RAG_Retrieval_Augmented_Generation/embedding_demo.py) · [`embedding_demo.md`](12_RAG_Retrieval_Augmented_Generation/embedding_demo.md) — OpenAI embeddings API first vector  
+- [`cosine_similarity.md`](12_RAG_Retrieval_Augmented_Generation/cosine_similarity.md) — compare embedding vectors; cosine vs distance; why dot product works when normalized  
 - [`4_building_rag_challenges.md`](12_RAG_Retrieval_Augmented_Generation/4_building_rag_challenges.md) — freshness, scale, relevance, bias, metrics; Bedrock KB note  
 - [`5_ragas_evaluation.md`](12_RAG_Retrieval_Augmented_Generation/5_ragas_evaluation.md) — faithfulness, answer relevancy, context recall/precision  
 - [`6_vector_store.md`](12_RAG_Retrieval_Augmented_Generation/6_vector_store.md) — embeddings storage, similarity search, popular vector DBs, full RAG diagram  

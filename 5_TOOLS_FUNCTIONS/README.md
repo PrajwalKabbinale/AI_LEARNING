@@ -1,10 +1,11 @@
 # Tools in AI
 
 Chapter notes for **Souvik’s** AI learning journey (folder `5_TOOLS_FUNCTIONS`).  
-Hands-on in this folder:
+Hands-on in this folder (read in order):
 
-- Script: [`tool_functions_1.py`](./tool_functions_1.py)  
-- Detailed walkthrough: [`tool_functions_1.md`](./tool_functions_1.md)
+1. **Plain Python functions** — [`helper_functions.py`](./helper_functions.py) · runner [`demo_helper_functions.py`](./demo_helper_functions.py) · notes [`helper_functions_and_demo.md`](./helper_functions_and_demo.md)  
+2. **Personas + keyword shortcuts** — [`tools_2.py`](./tools_2.py) · [`tool_functions_2.py`](./tool_functions_2.py) · notes [`tool_functions_2_and_tools_2.md`](./tool_functions_2_and_tools_2.md)  
+3. **LLM + OpenAI tools** — [`tool_functions_1.py`](./tool_functions_1.py) · [`tool_functions_1.md`](./tool_functions_1.md)
 
 ---
 

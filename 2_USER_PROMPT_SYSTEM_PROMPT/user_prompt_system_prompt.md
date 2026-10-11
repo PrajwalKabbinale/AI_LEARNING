@@ -2,6 +2,8 @@
 
 Explains [`user_prompt_system_prompt.py`](./user_prompt_system_prompt.py): a small learning script that scrapes a webpage, then asks an OpenAI model for a snarky markdown summary.
 
+For **`role`** (`system` / `user` / `assistant`) in the Chat API, see [`../1_PRACTICE_ON_OLLAMA_and_OPENAI/chat_message_roles.md`](../1_PRACTICE_ON_OLLAMA_and_OPENAI/chat_message_roles.md).
+
 ## What this script teaches
 
 1. Loading secrets from a `.env` file (`OPENAI_API_KEY`, `MODEL_NAME`)

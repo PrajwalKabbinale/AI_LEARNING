@@ -2,7 +2,7 @@
 
 Chapter notes (folder `12_RAG_Retrieval_Augmented_Generation`).
 
-**Read order:** `3` of `8` — after [`2_rag_architecture_and_workflow.md`](./2_rag_architecture_and_workflow.md) §8 (autoencoder vs autoregressive vs encoder–decoder) for the full architecture picture; this note focuses on RAG roles and embeddings. **Next deep dive:** [`6_vector_store.md`](./6_vector_store.md).
+**Read order:** `3` of `8` — after [`2_rag_architecture_and_workflow.md`](./2_rag_architecture_and_workflow.md) §8 (autoencoder vs autoregressive vs encoder–decoder) for the full architecture picture; this note focuses on RAG roles and embeddings. **Hands-on next:** [`text_embedding_3_small.md`](./text_embedding_3_small.md). **Then:** [`6_vector_store.md`](./6_vector_store.md).
 
 Related: [`1_introduction_to_rag.md`](./1_introduction_to_rag.md) · [`what_is_huggingface.md`](../7_HUGGING_FACE/what_is_huggingface.md) (pipelines / encoder models)
 
@@ -81,5 +81,7 @@ That is why RAG retrieval is also called **semantic search**.
 | Open-source encoders on Hugging Face | Self-hosted, language-specific options |
 
 Pick one embedding model for **both** indexing and query embedding; mixing unrelated models breaks similarity search.
+
+**Practice:** call OpenAI `text-embedding-3-small` — [`text_embedding_3_small.md`](./text_embedding_3_small.md) · [`embedding_demo.py`](./embedding_demo.py) · [`embedding_demo.md`](./embedding_demo.md).
 
 For ingest + query flow, see [`2_rag_architecture_and_workflow.md`](./2_rag_architecture_and_workflow.md).

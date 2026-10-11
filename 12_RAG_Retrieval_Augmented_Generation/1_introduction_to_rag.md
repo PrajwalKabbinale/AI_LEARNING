@@ -11,6 +11,8 @@ Related: [`what_is_an_llm.md`](../3_LLMs_and_TOKENS/what_is_an_llm.md) · [`READ
 | 1 | **This file** | What an **FM** is, what RAG is, limits, vs fine-tuning |
 | 2 | [`2_rag_architecture_and_workflow.md`](./2_rag_architecture_and_workflow.md) | Ingestion, retrieve, augment, generate; 6-step query flow |
 | 3 | [`3_lm_types_and_embeddings.md`](./3_lm_types_and_embeddings.md) | Autoregressive vs autoencoding; embedding models for RAG |
+| — | [`text_embedding_3_small.md`](./text_embedding_3_small.md) | Hands-on: OpenAI embeddings API + tiny semantic search (after note 3) |
+| — | [`cosine_similarity.md`](./cosine_similarity.md) | How two embedding vectors are compared for ranking (before / with note 6) |
 | 4 | [`4_building_rag_challenges.md`](./4_building_rag_challenges.md) | Operational challenges (freshness, scale, relevance, bias, metrics) |
 | 5 | [`5_ragas_evaluation.md`](./5_ragas_evaluation.md) | RAGAS metrics: faithfulness, relevancy, context recall/precision |
 | 6 | [`6_vector_store.md`](./6_vector_store.md) | What a vector store is, similarity search, popular tools, full RAG diagram |
