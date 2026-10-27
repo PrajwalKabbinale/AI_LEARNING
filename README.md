@@ -27,6 +27,8 @@ If you are new to AI and feel lost in big words, this journey is for you.
 - practice **model fine-tuning** — specialize a pre-trained LLM on a small task dataset
 - learn **LoRA** — efficient fine-tuning with small adapter weights (and **QLoRA** with quantization)
 - use **Modal** — run Python and GPU workloads in the cloud from your code
+- build a **mini AI agent** — planner LLM picks a tool, Python runs it, answer LLM replies
+- learn **MCP** — Model Context Protocol (“USB-C” for connecting AI apps to tools and data)
 
 These notes are written in plain language, with step-by-step explanations, so beginners can follow along without fear.  
 If **Souvik** can learn it this way, you can too.
@@ -43,7 +45,7 @@ If **Souvik** can learn it this way, you can too.
 | 3 | [`3_LLMs_and_TOKENS`](3_LLMs_and_TOKENS/) | What an LLM is, features, tokens, stateless calls |
 | 4 | [`4_GRADIO`](4_GRADIO/) | Gradio UIs + chatbot with chat history |
 | 5 | [`5_TOOLS_FUNCTIONS`](5_TOOLS_FUNCTIONS/) | LLM tools / function calling (FlightAI ticket price) |
-| 6 | [`6_AGENTS_AND_TOOLS`](6_AGENTS_AND_TOOLS/) | AI Agents, workflow patterns, frameworks, tools theory |
+| 6 | [`6_AGENTS_AND_TOOLS`](6_AGENTS_AND_TOOLS/) | AI Agents theory — workflows, frameworks, tools (hands-on mini agent → topic 18) |
 | 7 | [`7_HUGGING_FACE`](7_HUGGING_FACE/) | Hugging Face — Hub, pipelines, Spaces |
 | 8 | [`8_GOOGLE_COLAB`](8_GOOGLE_COLAB/) | Google Colab — cloud notebooks, GPUs, secrets |
 | 9 | [`9_QUANTIZATION`](9_QUANTIZATION/) | Quantization — 8-bit / 4-bit, BitsAndBytes |
@@ -55,6 +57,8 @@ If **Souvik** can learn it this way, you can too.
 | 15 | [`15_MODEL_FINE_TUNING`](15_MODEL_FINE_TUNING/) | Fine-tuning — start [`1_fine_tuning_in_llm.md`](15_MODEL_FINE_TUNING/1_fine_tuning_in_llm.md) |
 | 16 | [`16_LORA`](16_LORA/) | LoRA / QLoRA — read `1_` … `3_` in [`16_LORA/`](16_LORA/) |
 | 17 | [`17_MODAL`](17_MODAL/) | Modal — start [`1_what_is_modal.md`](17_MODAL/1_what_is_modal.md) |
+| 18 | [`18_AI_AGENTS_INTRO`](18_AI_AGENTS_INTRO/) | Mini AI agent — read `1_` → `2_` (start [`README.md`](18_AI_AGENTS_INTRO/README.md)) |
+| 19 | [`19_MCP_MODEL_CONTEXT_PROTOCOL`](19_MCP_MODEL_CONTEXT_PROTOCOL/) | MCP — read `1_` … `5_` (start [`README.md`](19_MCP_MODEL_CONTEXT_PROTOCOL/README.md)) |
 
 ### Topic 1 highlight
 
@@ -67,10 +71,13 @@ If **Souvik** can learn it this way, you can too.
 - Step 1: [`helper_functions_and_demo.md`](5_TOOLS_FUNCTIONS/helper_functions_and_demo.md) — plain Python helpers + `demo_helper_functions.py`  
 - Step 2: [`tool_functions_2_and_tools_2.md`](5_TOOLS_FUNCTIONS/tool_functions_2_and_tools_2.md) — personas, chat memory, keyword → `tools_2.py`  
 - Step 3: [`tool_functions_1.py`](5_TOOLS_FUNCTIONS/tool_functions_1.py) · [`tool_functions_1.md`](5_TOOLS_FUNCTIONS/tool_functions_1.md) — OpenAI `tools=`, Gradio FlightAI  
+- Related hands-on agent (planner picks tool by name): [`18_AI_AGENTS_INTRO/`](18_AI_AGENTS_INTRO/)  
 
 ### Topic 6 highlight
 
 - Notes: [`agents_and_tools.md`](6_AGENTS_AND_TOOLS/agents_and_tools.md) — what is an Agent, workflow vs agent patterns, frameworks, LLM brain, tools theory  
+- Hands-on mini agent (later): [`18_AI_AGENTS_INTRO/`](18_AI_AGENTS_INTRO/) — planner + tools + assistant loop  
+
 
 ### Topic 7 highlight
 
@@ -156,6 +163,22 @@ If **Souvik** can learn it this way, you can too.
 - Script: [`llama.py`](17_MODAL/llama.py) · Notes: [`4_llama_py.md`](17_MODAL/4_llama_py.md) — easy **Llama 3.2 3B Instruct** Q&A on Modal (no LoRA)  
 - Script: [`TEST_MODAL_LLAMA.py`](17_MODAL/TEST_MODAL_LLAMA.py) · Notes: [`5_test_modal_llama_py.md`](17_MODAL/5_test_modal_llama_py.md) — run Llama via `generate.remote()` (see [`4_llama_py.md`](17_MODAL/4_llama_py.md))
 
+### Topic 18 highlight
+
+- Chapter intro: [`18_AI_AGENTS_INTRO/README.md`](18_AI_AGENTS_INTRO/README.md) — read order + quick start  
+- Notes: [`1_what_is_ai_agent.md`](18_AI_AGENTS_INTRO/1_what_is_ai_agent.md) — chatbot vs agent, brain + body, observe → plan → act → speak  
+- Scripts: [`tools.py`](18_AI_AGENTS_INTRO/tools.py) · [`planner.py`](18_AI_AGENTS_INTRO/planner.py) · [`assistant.py`](18_AI_AGENTS_INTRO/assistant.py) — entry point `python assistant.py`  
+- Script notes: [`2_assistant_planner_tools.md`](18_AI_AGENTS_INTRO/2_assistant_planner_tools.md) — line-by-line + sample session (`time` / `dice` / `password` / capital / `bye` vs `quit`)  
+- Builds on: [`5_TOOLS_FUNCTIONS`](5_TOOLS_FUNCTIONS/) (keywords → tools) · theory [`agents_and_tools.md`](6_AGENTS_AND_TOOLS/agents_and_tools.md)  
+
+### Topic 19 highlight
+
+- Chapter intro: [`19_MCP_MODEL_CONTEXT_PROTOCOL/README.md`](19_MCP_MODEL_CONTEXT_PROTOCOL/README.md) — read `1_` → `5_` in order  
+- [`1_introduction.md`](19_MCP_MODEL_CONTEXT_PROTOCOL/1_introduction.md) · … · [`6_fastmcp.md`](19_MCP_MODEL_CONTEXT_PROTOCOL/6_fastmcp.md) — FastMCP concepts  
+- Lab **PROJECT_1**: [`weather.py`](19_MCP_MODEL_CONTEXT_PROTOCOL/PROJECT_1/weather.py) · [`7_weather_py.md`](19_MCP_MODEL_CONTEXT_PROTOCOL/PROJECT_1/7_weather_py.md) — NWS MCP server, Cursor `mcp.json`, line-by-line  
+- Lab **PROJECT_2**: [`8_mcp_client_lab.md`](19_MCP_MODEL_CONTEXT_PROTOCOL/PROJECT_2/8_mcp_client_lab.md) — `server.py` + `mcp_client.py` + `test_client.py` (`python test_client.py`)  
+- Builds on: [`18_AI_AGENTS_INTRO/`](18_AI_AGENTS_INTRO/) · [`5_TOOLS_FUNCTIONS/`](5_TOOLS_FUNCTIONS/)  
+
 ### Extra notes
 
 - [`OpenAI_API_vs_ChatGPT_subscription.md`](OpenAI_API_vs_ChatGPT_subscription.md) — API billing vs ChatGPT plans  
@@ -171,3 +194,5 @@ cd /home/soudas/PERSONAL/AI_LEARNING/AI_LEARNING
 ```
 
 Keep secrets in `.env` at this repo root (`OPENAI_API_KEY=<your_openai_api_key_here>`). It is gitignored.
+
+Topic **18** also reads `OPENAI_MODEL` (e.g. `gpt-4.1-nano`) from `.env` for the planner + answer calls.
